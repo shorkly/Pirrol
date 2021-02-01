@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Montserrart";
+    src: url("Montserrat-Medium.woff2") format("woff2"), url("Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "NunitoSans";
+    src: url("NunitoSans-Regular.woff2") format("woff2"), url("NunitoSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "WorkSans";
+    src: url("WorkSans-Regular.woff2") format("woff2"), url("WorkSans-Regular.woff") format("woff");
+}

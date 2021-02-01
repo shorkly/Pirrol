@@ -1,0 +1,642 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  outline: 0 none;
+}
+
+body {
+  color: white;
+  background: #ebebeb url(../img/bg1.jpg) no-repeat;
+  background-size: cover;
+  background-position: -200px -100px;
+  cursor: default;
+}
+
+img {
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#toTop {
+  z-index: 98;
+  position: fixed;
+  cursor: pointer;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #414141;
+  background: lightgrey;
+  opacity: 0.4;
+}
+#toTop::after {
+  content: "";
+  position: relative;
+  left: 33%;
+  top: 40%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-right: 1px solid #414141;
+  border-top: 1px solid #414141;
+  opacity: 0.4;
+  transform: rotate(-45deg);
+}
+#toTop:hover {
+  opacity: 0.6;
+}
+#toTop:hover::after {
+  opacity: 0.8;
+}
+
+h2 {
+  font-family: "Montserrart";
+}
+
+p {
+  font-family: "NunitoSans";
+}
+
+header {
+  padding: 38px 0;
+}
+header .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .menu .logo {
+  display: inline-block;
+  background: url(../img/logo.png) center no-repeat;
+  width: 31px;
+  height: 25px;
+}
+header .menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 215px;
+}
+header .menu ul li a {
+  color: #191919;
+  font-size: 12px;
+  font-family: "Montserrart";
+  font-weight: 700;
+}
+header .menu ul li a:hover {
+  color: #10c9c3;
+}
+header .menu ul li a:active {
+  color: #10c9c3;
+}
+header .menu ul li a:focus {
+  color: #10c9c3;
+}
+
+.btn,
+button {
+  cursor: pointer;
+}
+
+.sec1 {
+  padding-top: 125px;
+}
+.sec1 .flex {
+  display: flex;
+  justify-content: flex-end;
+}
+.sec1 .sec1-content {
+  max-width: 500px;
+  width: 100%;
+}
+.sec1 .sec1-content h2 {
+  font-size: 38px;
+  color: #1d1d1d;
+  line-height: 48px;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+.sec1 .sec1-content .sec1-text {
+  width: 100%;
+  padding-bottom: 30px;
+}
+.sec1 .sec1-content .sec1-text p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #787878;
+}
+.sec1 .sec1-content .btn {
+  width: 180px;
+  height: 54px;
+  background-color: #10c9c3;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-bottom: 200px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Montserrart";
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+.sec1 .sec1-content .btn:hover {
+  background: white;
+  border: 2px solid #10c9c3;
+  transition: all 0.3s ease;
+  color: #10c9c3;
+  transition: all 0.3s ease;
+}
+.sec1 .sec1-content .btn:active {
+  background: #10c9c3;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.sec2 {
+  text-align: center;
+  padding: 100px 0;
+  background: white;
+}
+.sec2 .flex {
+  display: flex;
+  justify-content: center;
+}
+.sec2 .sec2-content {
+  max-width: 630px;
+  width: 100%;
+  text-align: center;
+}
+.sec2 .sec2-content h2 {
+  font-size: 30px;
+  color: #191919;
+  line-height: 60px;
+}
+.sec2 .sec2-content .sec2-text {
+  width: 100%;
+}
+.sec2 .sec2-content .sec2-text p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #787878;
+}
+
+.sec3 {
+  padding: 155px 0;
+  background: #e9e9e7 url(../img/bg2.jpg) right no-repeat;
+}
+.sec3 .sec3-content {
+  max-width: 500px;
+  width: 100%;
+}
+.sec3 .sec3-content h2 {
+  color: #171717;
+}
+.sec3 .sec3-content h5 {
+  margin-top: 35px;
+  font-family: "Montserrart";
+  font-size: 12px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: black;
+}
+.sec3 .sec3-content .progress-bar {
+  position: relative;
+  top: 14.5px;
+  width: 0%;
+  height: 3px;
+  background: #10c9c3;
+  background-size: 350px 5px;
+  border-radius: 10px;
+}
+.sec3 .sec3-content .bar1 {
+  animation: loading 6s ease-in-out forwards;
+}
+.sec3 .sec3-content .bar2 {
+  animation: loading1 6s ease-in-out forwards;
+}
+.sec3 .sec3-content .bar3 {
+  animation: loading2 6s ease-in-out forwards;
+}
+.sec3 .sec3-content .shadow {
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background: lightgrey;
+}
+@keyframes loading {
+  to {
+    width: 75%;
+  }
+}
+@keyframes loading1 {
+  to {
+    width: 90%;
+  }
+}
+@keyframes loading2 {
+  to {
+    width: 65%;
+  }
+}
+
+.sec4 {
+  background: #10c9c3;
+  padding: 82px 0 0;
+}
+.sec4 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sec4 ul li {
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrart";
+}
+.sec4 ul li svg {
+  fill: white;
+  width: 50%;
+  height: 50%;
+}
+.sec4 ul li .star {
+  height: 58%;
+  position: relative;
+  top: -5px;
+}
+.sec4 ul .item span {
+  font-size: 18px;
+  line-height: 30px;
+}
+.sec4 ul .item div {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.sec5 .gallery {
+  display: flex;
+  flex-direction: column;
+}
+.sec5 .gallery .photo-items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.sec5 .gallery .photo-items a {
+  width: 25%;
+}
+.sec5 .gallery .photo-items .photo {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: zoom-in;
+}
+.sec5 .gallery .photo-items .photo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 341px;
+  vertical-align: top;
+  transition: all 0.5s ease;
+}
+.sec5 .gallery .photo-items .photo:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sec5 .gallery .photo-items .photo:hover img {
+  transition: all 0.5s ease;
+  transform: scale(1.2);
+}
+.sec5 .gallery .photo-items .photo:hover::after {
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.sec5 .more {
+  display: none;
+}
+.sec5 .btn {
+  width: 100%;
+  padding: 45px 0;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Montserrart";
+  color: #8e8e8e;
+  font-size: 12px;
+  transition: all 0.5s ease;
+}
+.sec5 .btn:hover {
+  transition: all 0.5s ease;
+  background: #c9c9c9;
+  color: #eeeded;
+  transition: all 0.5s ease;
+}
+.sec5 .btn:active {
+  color: white;
+  background: #f5f5f5;
+  transition: all 0.5s ease;
+}
+
+.sec6 {
+  padding: 100px 0 45px;
+}
+.sec6 .sec6-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sec6 .sec6-content .items {
+  width: 235px;
+  height: 145px;
+  text-align: center;
+  margin-bottom: 55px;
+}
+.sec6 svg {
+  fill: #656565;
+  width: 50px;
+  height: 50px;
+}
+.sec6 h3 {
+  text-transform: uppercase;
+  font-family: "Montserrart";
+  color: #191919;
+  font-size: 12px;
+  line-height: 30px;
+  padding-top: 15px;
+}
+.sec6 .description {
+  padding-top: 5px;
+  font-family: "NunitoSans";
+  color: #787878;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sec7 {
+  background: #10c9c3;
+  padding: 170px 0 0;
+  text-align: center;
+}
+.sec7 .flex {
+  display: flex;
+  justify-content: center;
+}
+.sec7 .container {
+  max-width: 830px;
+}
+.sec7 .lightSlider.lSSlide.lsGrab {
+  height: 100% !important;
+}
+.sec7 blockquote {
+  font-size: 24px;
+  line-height: 36px;
+  font-family: "Montserrart";
+}
+.sec7 .name {
+  text-transform: uppercase;
+  font-family: "Montserrart";
+  padding-top: 35px;
+}
+.sec7 ul#slider {
+  height: 100% !important;
+}
+.sec7 ul.lSPager.lSpg {
+  margin-top: 105px !important;
+  margin-bottom: 60px;
+}
+.sec7 ul.lSPager.lSpg li a {
+  height: 6px;
+  width: 6px;
+  background: #b0e8e6;
+}
+.sec7 ul.lSPager.lSpg li.active a {
+  height: 10px;
+  width: 10px;
+  background: white;
+}
+.sec7 ul.lSPager.lSpg li:hover a {
+  background: white;
+}
+
+.sec8 {
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.sec8 .flex {
+  display: flex;
+  justify-content: space-between;
+}
+.sec8 li {
+  transition: all 0.4s ease;
+}
+.sec8 li:hover {
+  transition: all 0.4s ease;
+  transform: scale(1.1);
+}
+
+.sec9 {
+  background: #f5f5f5;
+  padding-bottom: 100px;
+}
+.sec9 h2 {
+  font-family: "Montserrart";
+  font-size: 30px;
+  line-height: 84px;
+  color: #1d1d1d;
+  padding: 100px 0 30px;
+}
+.sec9 .descr {
+  font-size: 16px;
+  font-family: "NunitoSans";
+  color: #787878;
+  line-height: 24px;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+.sec9 button {
+  width: 180px;
+  height: 54px;
+  background: #10c9c3;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Montserrart";
+  font-size: 12px;
+  line-height: 84px;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+.sec9 button:hover {
+  color: #10c9c3;
+  background: white;
+  border: 2px solid #10c9c3;
+  transition: all 0.4s ease;
+}
+.sec9 button:active {
+  color: white;
+  background: #10c9c3;
+  border: 2px solid white;
+  transition: all 0.4s ease;
+}
+.sec9 .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sec9 form {
+  max-width: 670px;
+  width: 100%;
+  height: 326px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin: 39px 0 30px;
+}
+.sec9 form input,
+.sec9 form textarea {
+  font-family: "NunitoSans";
+  font-size: 15px;
+  line-height: 24px;
+  color: #787878;
+  padding: 0 20px;
+}
+.sec9 form .inp1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sec9 form .inp1 input {
+  width: 48%;
+}
+.sec9 form input {
+  height: 48px;
+  border: none;
+}
+.sec9 form input:focus::placeholder {
+  color: transparent;
+}
+.sec9 form textarea {
+  width: 100%;
+  height: 170px;
+  padding-top: 18px;
+  border: none;
+  outline: 0 none;
+  resize: none;
+}
+.sec9 form textarea:focus::placeholder {
+  color: transparent;
+}
+.sec9 form:nth-child(3) {
+  width: 100%;
+}
+
+footer {
+  color: #bcbcbc;
+  background: #141414;
+}
+footer .pd {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer a {
+  color: #bcbcbc;
+  font-family: "NunitoSans";
+  font-size: 15px;
+  line-height: 24px;
+}
+footer a:hover {
+  color: white;
+}
+footer .copyrights {
+  max-width: 230px;
+  width: 100%;
+}
+footer .copyrights h3 {
+  font-family: "Montserrart";
+  font-size: 18px;
+  line-height: 72px;
+  color: white;
+}
+footer .copyrights p {
+  font-family: "NunitoSans";
+  font-size: 15px;
+  line-height: 24px;
+}
+footer .contacts {
+  display: flex;
+  flex-direction: column;
+}
+footer .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 200px;
+  width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  footer .pd {
+    flex-direction: column;
+  }
+
+  footer .copyrights {
+    max-width: 385px;
+  }
+
+  footer .contacts {
+    padding-top: 30px;
+  }
+
+  footer .nav {
+    padding-top: 30px;
+  }
+}
